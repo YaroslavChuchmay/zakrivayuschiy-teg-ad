@@ -11,8 +11,118 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <nav class="header__nav">
+        <a class="header__logo" href="#cards">Закрывающий тег</a>
+        <ul class="header__menu">
+          <li><a class="header__link" href="#cards">Карточки</a></li>
+          <li><a class="header__link" href="#about">О проекте</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="cards" id="cards">
+        <h1 class="cards__title">Воспоминания</h1>
+        <p class="cards__subtitle">Восемь карточек из прошлого</p>
+
+        <ul class="cards__list">
+          <li class="card">
+            <article class="card__body">
+              <span class="card__label">2024</span>
+              <img class="card__image card__image--1" src="./images/card-1.jpg" alt="Первая карточка" loading="lazy" />
+              <p class="card__text">Первый день в новом городе.</p>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__body">
+              <span class="card__label">2023</span>
+              <img class="card__image card__image--2" src="./images/card-2.jpg" alt="Вторая карточка" loading="lazy" />
+              <p class="card__text">Летняя поездка к морю.</p>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__body">
+              <span class="card__label">2023</span>
+              <img class="card__image card__image--3" src="./images/card-3.jpg" alt="Третья карточка" loading="lazy" />
+              <p class="card__text">Ночной концерт под открытым небом.</p>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__body">
+              <span class="card__label">2022</span>
+              <img class="card__image card__image--4" src="./images/card-4.jpg" alt="Четвёртая карточка" loading="lazy" />
+              <p class="card__text">Первый снег этой зимой.</p>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__body">
+              <span class="card__label">2022</span>
+              <img class="card__image card__image--5" src="./images/card-5.jpg" alt="Пятая карточка" loading="lazy" />
+              <p class="card__text">Утренний кофе на балконе.</p>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__body">
+              <span class="card__label">2021</span>
+              <img class="card__image card__image--6" src="./images/card-6.jpg" alt="Шестая карточка" loading="lazy" />
+              <p class="card__text">Дорога домой после учёбы.</p>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__body">
+              <span class="card__label">2021</span>
+              <img class="card__image card__image--7" src="./images/card-7.jpg" alt="Седьмая карточка" loading="lazy" />
+              <p class="card__text">Встреча с друзьями спустя год.</p>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__body">
+              <span class="card__label">2020</span>
+              <img class="card__image card__image--8" src="./images/card-8.jpg" alt="Восьмая карточка" loading="lazy" />
+              <p class="card__text">Первый закат, который запомнился.</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="about" id="about">
+        <h2 class="about__title">О проекте</h2>
+        <p class="about__text">
+          Это учебный проект о воспоминаниях. Здесь собраны карточки с фотографиями
+          и короткими историями. Нажмите кнопку ниже, чтобы сохранить момент на память.
+        </p>
+
+        <button class="save-button" type="button">
+          <svg class="save-button__icon" aria-hidden="true">
+            <use href="./svg/sprite.svg#icon-heart"></use>
+          </svg>
+          <span class="save-button__text">Сохранить на память</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">Проект «Закрывающий тег» · 2024</p>
+    </footer>
+
+    <!-- инлайновое сердце для анимации -->
+    <svg class="heart" viewBox="0 0 100 100" aria-hidden="true">
+      <g class="heart__group">
+        <path class="heart__path" d="M50 85 L15 50 A20 20 0 0 1 50 30 A20 20 0 0 1 85 50 Z" />
+      </g>
+    </svg>
+
+    <dialog class="modal" id="save-modal">
+      <button class="modal__close" type="button" aria-label="Закрыть">
+        <svg class="modal__icon" aria-hidden="true">
+          <use href="./svg/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="modal__title">Сохранено!</h2>
+      <p class="modal__text">Момент сохранён на память.</p>
+    </dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>
