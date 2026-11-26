@@ -16,7 +16,6 @@ body {
   line-height: 1.5;
 }
 
-/* затемнение нижней части фона */
 body::after {
   content: "";
   position: fixed;
